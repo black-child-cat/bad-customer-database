@@ -1,0 +1,17 @@
+{
+  "prettier.useTabs": true,
+  "editor.tabCompletion": "on",
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.wordWrapColumn": 500,
+  "html.format.wrapLineLength": 0,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+      // "savePath": "~/../assets/css"
+    }
+  ]
+}
