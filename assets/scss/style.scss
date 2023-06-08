@@ -1,7 +1,21 @@
+@font-face {
+	font-family: "line";
+	src: url("../font/LINESeedJP_OTF_Rg.woff"),
+		url("../font/LINESeedJP_OTF_Rg.woff2");
+}
+body {
+	font-family: "line";
+}
 .nav-pills {
 	.nav-link {
 		&.active {
 			background-color: #2b2930;
 		}
 	}
+}
+.nav-link {
+	color: #06c755;
+}
+.btn-line {
+	background-color: #06c755;
 }
