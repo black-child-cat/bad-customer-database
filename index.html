@@ -30,10 +30,10 @@
 	<body class="bg-light">
 		<div class="container mx-auto">
 			<div class="row border-bottom py-2 px-2 bg-white">
-				<ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+				<ul class="nav nav-pills nav-fill px-0" id="pills-tab" role="tablist">
 					<li class="nav-item" role="presentation">
 						<button
-							class="nav-link px-0 active"
+							class="nav-link px-0 fw-bold active"
 							id="pills-01-tab"
 							data-bs-toggle="pill"
 							data-bs-target="#pills-01"
@@ -42,12 +42,12 @@
 							aria-controls="pills-01"
 							aria-selected="true"
 						>
-							悪質ユーザー照会
+							被害実態を照会
 						</button>
 					</li>
 					<li class="nav-item" role="presentation">
 						<button
-							class="nav-link px-0"
+							class="nav-link px-0 fw-bold"
 							id="pills-02-tab"
 							data-bs-toggle="pill"
 							data-bs-target="#pills-02"
@@ -56,7 +56,7 @@
 							aria-controls="pills-02"
 							aria-selected="false"
 						>
-							悪質ユーザー登録
+							被害状況を報告
 						</button>
 					</li>
 				</ul>
@@ -79,7 +79,7 @@
 							<input
 								type="text"
 								id="disabledTextInput"
-								class="form-control"
+								class="form-control form-control-lg"
 								placeholder="例）09012345678"
 								disabled
 							/>
@@ -102,69 +102,24 @@
 					</div>
 				</div>
 				<div
-					class="tab-pane fade pt-4"
+					class="tab-pane fade pt-3"
 					id="pills-02"
 					role="tabpanel"
 					aria-labelledby="pills-02-tab"
 				>
 					<form
-						action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd17JP12Gt74VwS16cBsbFV5bvjKOt-N0BgTzBiEmBXXEDcnA/formResponse"
-						method="post"
+						id="myForm"
 						class=""
 					>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="entry.854397706" class="form-label fw-bold"
-								>利用者の名前</label
-							>
-							<input
-								type="text"
-								class="form-control"
-								id="entry.854397706"
-								name="entry.854397706"
-								aria-describedby="emailHelp"
-								placeholder="例）田中太郎"
-							/>
-							<div id="emailHelp" class="form-text text-muted small">
-								<span class="small"
-									>※本名が分からない場合は記入しないでください。</span
-								>
-							</div>
-						</div>
-						<div class="pb-3 mb-3 border-bottom">
-							<label for="entry.364900408" class="form-label fw-bold"
-								>予約時の名前</label
-							>
-							<input
-								type="text"
-								class="form-control"
-								id="entry.364900408"
-								name="entry.364900408"
-								aria-describedby="emailHelp"
-								placeholder="例）タナカ"
-							/>
-						</div>
-						<div class="pb-3 mb-3 border-bottom">
-							<label for="entry.1439965255" class="form-label fw-bold"
-								>予約時の電話番号（ハイフンなし）</label
-							>
-							<input
-								type="text"
-								class="form-control"
-								id="entry.1439965255"
-								name="entry.1439965255"
-								aria-describedby="emailHelp"
-								placeholder="例）09012345678"
-							/>
-						</div>
-						<div class="pb-3 mb-3 border-bottom">
-							<label for="entry.791928921" class="form-label fw-bold"
+							<label for="region" class="form-label fw-bold"
 								>利用エリア</label
 							>
 							<select
 								class="form-select form-select-lg"
 								aria-label=".form-select-lg example"
-								id="entry.791928921"
-								name="entry.791928921"
+								id="region"
+								name="region"
 								required
 							>
 								<option value="" hidden>選択してください</option>
@@ -217,57 +172,62 @@
 							</select>
 						</div>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="entry.551498411" class="form-label fw-bold"
+							<label for="area" class="form-label fw-bold"
 								>利用地域</label
 							>
 							<input
 								type="text"
-								class="form-control"
-								id="entry.551498411"
-								name="entry.551498411"
+								class="form-control form-control-lg"
+								name="area"
 								aria-describedby="emailHelp"
 								placeholder="例）○○市○○駅近くの○○ホテル"
 							/>
 						</div>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="entry.1088729842" class="form-label fw-bold"
+							<label for="store" class="form-label fw-bold"
 								>利用店舗</label
 							>
 							<input
 								type="text"
-								class="form-control"
-								id="entry.1088729842"
-								name="entry.1088729842"
+								class="form-control form-control-lg"
+								id="store"
+								name="store"
 								aria-describedby="emailHelp"
 								placeholder="例）○○エリアの○○系店舗"
 							/>
-							<div id="emailHelp" class="form-text text-muted small">
-								<span class="small">言いづらい場合は濁しても大丈夫です。</span>
+							<div id="emailHelp" class="form-text text-muted small lh-sm">
+								<span class="small">被害を受けた際の在籍店舗を教えてください。略称ではなく媒体にも記載されている公式店舗名でお願いします。当面、慎重を期して公表しませんが将来的に改善を促す材料または被害抑止のために公開しうる可能性もあります。</span>
 							</div>
 						</div>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="entry.1471496690" class="form-label fw-bold"
+							<label for="kinds" class="form-label fw-bold"
+								>被害種別</label
+							>
+							<select
+								class="form-select form-select-lg"
+								aria-label=".form-select-lg example"
+								id="kinds"
+								name="kinds"
+								required
+							>
+								<option value="" hidden>選択してください</option>
+								<option value="北海道">北海道</option>
+								<option value="青森">青森</option>
+								<option value="岩手">岩手</option>
+								<option value="宮城">宮城</option>
+								<option value="秋田">秋田</option>
+							</select>
+						</div>
+						<div class="pb-3 mb-3 border-bottom">
+							<label for="detail" class="form-label fw-bold"
 								>問題行為</label
 							>
 							<textarea
-								class="form-control"
-								id="entry.1471496690"
+								class="form-control form-control-lg"
+								id="detail"
 								rows="4"
-								name="entry.1471496690"
+								name="detail"
 								placeholder="例）この人は○○を要求してきます。○○をしてきました。"
-								required
-							></textarea>
-						</div>
-						<div class="pb-3 mb-3">
-							<label for="entry.1011978129" class="form-label fw-bold"
-								>加害者の特徴</label
-							>
-							<textarea
-								class="form-control"
-								id="entry.1011978129"
-								rows="4"
-								name="entry.1011978129"
-								placeholder="例）身長１○○センチくらいの中肉中背で、顔は○○に似ています。年齢は○○くらいに見えました。"
 								required
 							></textarea>
 						</div>
@@ -276,7 +236,7 @@
 						>
 							<div class="container py-1">
 								<input
-									type="submit"
+									type="button" onclick="postData()"
 									class="my-2 btn btn-lg btn-line w-100 fw-bold"
 									value="登録する"
 								/>

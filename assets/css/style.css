@@ -1,9 +1,19 @@
 @font-face {
-  font-family: "line";
-  src: url("../font/LINESeedJP_OTF_Rg.woff"), url("../font/LINESeedJP_OTF_Rg.woff2");
+  font-family: "LINE SEED";
+  src: url("../font/woff2/LINESeedJP_OTF_Rg.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LINE SEED";
+  src: url("../font/woff2/LINESeedJP_OTF_Bd.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
 }
 body {
-  font-family: "line";
+  font-family: "LINE SEED", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
 }
 
 .nav-pills .nav-link.active {
@@ -16,4 +26,15 @@ body {
 
 .btn-line {
   background-color: #06c755;
+  color: #fff;
+}
+
+.form-select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+.form-control:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
 }/*# sourceMappingURL=style.css.map */
