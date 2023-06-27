@@ -102,24 +102,42 @@
 					</div>
 				</div>
 				<div
-					class="tab-pane fade pt-3"
+					class="tab-pane fade pt-3 position-relative"
 					id="pills-02"
 					role="tabpanel"
 					aria-labelledby="pills-02-tab"
 				>
+					<div
+						class="toast position-absolute align-items-center w-100 text-white bg-dark border-0"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
+					>
+						<div class="d-flex">
+							<div class="toast-body">
+								被害情報を送信しました。情報提供ありがとうございます。
+							</div>
+							<button
+								type="button"
+								class="btn-close btn-close-white me-2 m-auto"
+								data-bs-dismiss="toast"
+								aria-label="Close"
+							></button>
+						</div>
+					</div>
 					<form
 						id="myForm"
-						class=""
+						action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd17JP12Gt74VwS16cBsbFV5bvjKOt-N0BgTzBiEmBXXEDcnA/formResponse"
+						method="post"
+						class="c-form"
 					>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="region" class="form-label fw-bold"
-								>利用エリア</label
-							>
+							<label for="region" class="form-label fw-bold">利用エリア</label>
 							<select
 								class="form-select form-select-lg"
 								aria-label=".form-select-lg example"
 								id="region"
-								name="region"
+								name="entry.791928921"
 								required
 							>
 								<option value="" hidden>選択してください</option>
@@ -172,61 +190,55 @@
 							</select>
 						</div>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="area" class="form-label fw-bold"
-								>利用地域</label
-							>
+							<label for="area" class="form-label fw-bold">利用地域</label>
 							<input
 								type="text"
 								class="form-control form-control-lg"
-								name="area"
+								name="entry.551498411"
 								aria-describedby="emailHelp"
 								placeholder="例）○○市○○駅近くの○○ホテル"
 							/>
 						</div>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="store" class="form-label fw-bold"
-								>利用店舗</label
-							>
+							<label for="store" class="form-label fw-bold">利用店舗</label>
 							<input
 								type="text"
 								class="form-control form-control-lg"
 								id="store"
-								name="store"
+								name="entry.1088729842"
 								aria-describedby="emailHelp"
 								placeholder="例）○○エリアの○○系店舗"
 							/>
 							<div id="emailHelp" class="form-text text-muted small lh-sm">
-								<span class="small">被害を受けた際の在籍店舗を教えてください。略称ではなく媒体にも記載されている公式店舗名でお願いします。当面、慎重を期して公表しませんが将来的に改善を促す材料または被害抑止のために公開しうる可能性もあります。</span>
+								<span class="small"
+									>被害を受けた際の在籍店舗を教えてください。略称ではなく媒体にも記載されている公式店舗名でお願いします。当面、慎重を期して公表しませんが将来的に改善を促す材料または被害抑止のために公開しうる可能性もあります。</span
+								>
 							</div>
 						</div>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="kinds" class="form-label fw-bold"
-								>被害種別</label
-							>
+							<label for="kinds" class="form-label fw-bold">被害種別</label>
 							<select
 								class="form-select form-select-lg"
 								aria-label=".form-select-lg example"
 								id="kinds"
-								name="kinds"
+								name="entry.1011978129"
 								required
 							>
 								<option value="" hidden>選択してください</option>
-								<option value="北海道">北海道</option>
-								<option value="青森">青森</option>
-								<option value="岩手">岩手</option>
-								<option value="宮城">宮城</option>
-								<option value="秋田">秋田</option>
+								<option value="本番強要">本番強要</option>
+								<option value="盗撮・盗聴">盗撮・盗聴</option>
+								<option value="暴力・暴言">暴力・暴言</option>
+								<option value="ドタキャン">ドタキャン</option>
+								<option value="趣味講習">趣味講習</option>
 							</select>
 						</div>
 						<div class="pb-3 mb-3 border-bottom">
-							<label for="detail" class="form-label fw-bold"
-								>問題行為</label
-							>
+							<label for="detail" class="form-label fw-bold">問題行為</label>
 							<textarea
 								class="form-control form-control-lg"
 								id="detail"
 								rows="4"
-								name="detail"
+								name="entry.1471496690"
 								placeholder="例）この人は○○を要求してきます。○○をしてきました。"
 								required
 							></textarea>
@@ -236,7 +248,7 @@
 						>
 							<div class="container py-1">
 								<input
-									type="button" onclick="postData()"
+									type="submit"
 									class="my-2 btn btn-lg btn-line w-100 fw-bold"
 									value="登録する"
 								/>
